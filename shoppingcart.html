@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,600">
+    <link rel="stylesheet" href="stylesheet/plugin/rangeslider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/plugin/gangeslider.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="stylesheet/plugin/swipebox.css">
+    <title>Bootstrap | 電商平台</title>
+</head>
+
+<body>
+    <!--header-->
+    <header class="header container mt-5">
+        <div class="row">
+            <!--漢堡選單-->
+            <div class="open-icon">
+                <a class="btn" href=""><i class="fa fa-bars" aria-hidden="true"></i></a>
+            </div>
+            <!--社群icon-->
+            <div class="community col-lg-4">
+                <nav class="nav">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-snapchat-ghost fa-lg" aria-hidden="true"></i>
+                    </a>
+                </nav>
+            </div>
+            <!--LOGO-->
+            <div class="logo col-lg-4">
+                <img class="d-block mx-auto" src="image/LOGO.svg" alt="">
+            </div>
+            <!--使用選單-->
+            <div class="side col-lg-4">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            <span class="badge badge-danger rounded-circle">10</span>
+                        </a>
+                    </li>
+                    <!--搜尋-->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="您想搜尋什麼..."
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <ul class="menu nav nav-pills nav-justified">
+            <li class="mb-close-menu nav-item">
+                <button class="btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link h4 text-secondary" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link h4 text-secondary" href="about.html">ABOUT</a>
+            </li>
+            <li class="shop mb-shop nav-item">
+                <a class="nav-link h4" href="shop.html">
+                    SHOP
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </a>
+                <ul class="list-group">
+                    <li class="list-group-item border-top-0">
+                        <a class="btn" href="#">
+                            <p>全部</p>ALL
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="btn" href="#">
+                            <p>男裝</p>MAN's
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="btn" href="#">
+                            <p>女裝</p>WOMAN's
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="btn" href="#">
+                            <p>童裝</p>KID's
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="btn" href="#">
+                            <p>飾品</p>ACCESSORIES
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link h4 text-secondary" href="contact.html">BLOG</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link h4 text-secondary" href="contact.html">CONTACT</a>
+            </li>
+        </ul>
+    </header>
+
+    <nav class="bdb container-fluid py-5" aria-label="breadcrumb">
+        <h1>SHOPPING CART</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Shoppingcart</li>
+        </ol>
+    </nav>
+
+    <main>
+        <section class="shoppingcart container">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 500px;">PRODUCT NAME</th>
+                        <th scope="col">UNIT PRICE</th>
+                        <th scope="col">QUANTITY</th>
+                        <th scope="col">TOTAL</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <div class="cartimg">
+                                <img src="image/shoes8.jpg" alt="" style="height: 100%;width: 50%;">
+                            </div>
+                            <div class="cartpd">
+                                <p>舒適透氣慢跑鞋(女)</p>
+                                <span>紅色</span>
+                                <span>27.5</span>
+                            </div>
+                        </th>
+                        <td>
+                            $39.00
+                        </td>
+                        <td>
+                            <div class="quantity">
+                                <input type="number" min="1" max="50" step="1" value="2">
+                            </div>
+                        </td>
+                        <td>
+                            $78.00
+                        </td>
+                        <td>
+                            <button class="btn">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="cartimg">
+                                <img src="image/accessories3.jpg" alt="" style="height: 100%;width: 50%;">
+                            </div>
+                            <div class="cartpd">
+                                <p>紅寶石項鍊(女)</p>
+                                <span>翡翠紅色</span>
+                            </div>
+                        </th>
+                        <td>
+                            $139.00
+                        </td>
+                        <td>
+                            <div class="quantity">
+                                <input type="number" min="1" max="50" step="1" value="1">
+                            </div>
+                        </td>
+                        <td>
+                            $78.00
+                        </td>
+                        <td>
+                            <button class="btn">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="cartimg">
+                                <img src="image/pant5.jpg" alt="" style="height: 100%;width: 50%;">
+                            </div>
+                            <div class="cartpd">
+                                <p>顯長牛仔褲短(女)</p>
+                                <span>淺藍色</span>
+                                <span>XXL</span>
+                            </div>
+                        </th>
+                        <td>
+                            $19.00
+                        </td>
+                        <td>
+                            <div class="quantity">
+                                <input type="number" min="1" max="50" step="1" value="1">
+                            </div>
+                        </td>
+                        <td>
+                            $78.00
+                        </td>
+                        <td>
+                            <button class="btn">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="cartimg">
+                                <img src="image/clothes2.jpg" alt="" style="height: 100%;width: 50%;">
+                            </div>
+                            <div class="cartpd">
+                                <p>經典superlogo 短袖Tshirt</p>
+                                <span>綠色</span>
+                                <span>M</span>
+                            </div>
+                        </th>
+                        <td>
+                            $9.00
+                        </td>
+                        <td>
+                            <div class="quantity">
+                                <input type="number" min="1" max="50" step="1" value="3">
+                            </div>
+                        </td>
+                        <td>
+                            $78.00
+                        </td>
+                        <td>
+                            <button class="btn">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="subtotal">
+                <a href="shop.html" class="btn btn-outline-secondary">CONTINUE SHOPPING</a>
+                <p>Subtotal:<span>$198.00</span></p>
+            </div>
+            <div class="subtotal">
+                <div class="item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing eliillo laborum repellat optio amet qui
+                        adipisci
+                        suscipit maiores esse i</p>
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="Enter your couppon code"
+                            aria-label="Username" aria-describedby="addon-wrapping">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="addon-wrapping">
+                                <i class="fa fa-smile-o" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="checkout.html" class="btn btn-secondary">ORDER NOW</a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="relate container-fluid">
+            <h3>其他類似的商品</h3>
+            <div class="col-md-9">
+                <div class="products">
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <div class="card">
+                            <img src="image/clothes1.jpg" class="card-img">
+                            <div class="card-img-overlay">
+                                <span class="hot">HOT</span>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-body h-100">
+                                <p class="card-text">紳士厚底舒適包</p>
+                                <p class="card-text">NT $990</p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <a href="shopdetail.html"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="image/clothes2.jpg" class="card-img">
+                            <div class="card-img-overlay">
+                                <span class="hot">HOT</span>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-body h-100">
+                                <p class="card-text">紳士厚底舒適包</p>
+                                <p class="card-text">NT $990</p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <a href="shopdetail.html"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="image/clothes3.jpg" class="card-img">
+                            <div class="card-img-overlay">
+                                <span class="hot">HOT</span>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-body h-100">
+                                <p class="card-text">紳士厚底舒適包</p>
+                                <p class="card-text">NT $990</p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <a href="shopdetail.html"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="image/clothes4.jpg" class="card-img">
+                            <div class="card-img-overlay">
+                                <span class="hot">HOT</span>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-body h-100">
+                                <p class="card-text">紳士厚底舒適包</p>
+                                <p class="card-text">NT $990</p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <a href="shopdetail.html"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="image/clothes5.jpg" class="card-img">
+                            <div class="card-img-overlay">
+                                <span class="hot">HOT</span>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-body h-100">
+                                <p class="card-text">紳士厚底舒適包</p>
+                                <p class="card-text">NT $990</p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <a href="shopdetail.html"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="container-fluid pt-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6 col-xl-3">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <img class="d-block mx-auto" src="image/LOGO.svg" alt="">
+                    </li>
+                    <li class="list-group-item">
+                        <p class="h1 text-center">RONA CLOTHES</p>
+                        <p class=" text-center">Copyright © 2020 RONA Inc. All rights reserved</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-3">
+                <ul class="list-group">
+                    <li class="list-group-item h2">-- Help --</li>
+                    <li class="list-group-item">會員群益</li>
+                    <li class="list-group-item">常見問題</li>
+                    <li class="list-group-item">售後服務</li>
+                    <li class="list-group-item">Personal consultant</li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-3">
+                <ul class="list-group">
+                    <li class="list-group-item h2">-- follower us --</li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa fa-facebook-official fa-2x mr-2" aria-hidden="true"></i>
+                        <span>rona_clothes_store</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa fa-twitter fa-2x mr-2" aria-hidden="true"></i>
+                        <span>ronaclothes</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa fa-instagram fa-2x mr-2" aria-hidden="true"></i>
+                        <span>@ronaclothes0319</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa fa-snapchat-ghost fa-2x mr-2" aria-hidden="true"></i>
+                        <span>ronact</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-3">
+                <ul class="list-group">
+                    <li class="list-group-item h2">-- Subscribe --</li>
+                    <li class="list-group-item">
+                        <div class="h4 mb-3">
+                            訂閱我們
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Your email..." aria-label="Your email"
+                                aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="input-group-text text-white" id="basic-addon2">Submit</button>
+                            </div>
+                        </div>
+                        <div class="h5 mb-3 mt-5">
+                            <p>
+                                <i class="fa fa-phone mr-2" aria-hidden="true"></i>
+                                05-4686515
+                            </p>
+                            <p>
+                                <i class="fa fa-envelope-o mr-2" aria-hidden="true"></i>
+                                rona@gmail.com
+                            </p>
+                            <p>
+                                <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                                300 新竹市西區中山路一段22號1樓
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!--bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!--swiper-->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!--swipebox-->
+
+    <script src="js/plugin/jquery-2.1.0.min.js"></script>
+    <script src="js/plugin/jquery.swipebox.min.js"></script>
+    <script src="js/all.js"></script>
+
+</body>

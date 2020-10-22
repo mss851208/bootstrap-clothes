@@ -1,0 +1,270 @@
+/*banner*/
+.banner{
+    max-width: 1200px;
+    height: 100%;
+    --swiper-navigation-color: #ffffffed;
+    --swiper-navigation-size: 50px;
+}
+
+/*標題*/
+.title-logo{
+    margin: 100px 0 !important;
+    p{
+        strong {
+            position: relative;
+            text-transform: uppercase;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: -20%;
+                margin: auto 0;
+                width: 20px;
+                height: 2px;
+                background-color: rgb(58, 58, 58);
+                @include small (){
+                    display: none;
+                }
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -20%;
+                margin: auto 0;
+                width: 20px;
+                height: 2px;
+                background-color: rgb(58, 58, 58);
+                @include small (){
+                    display: none;
+                }
+            }
+        }
+    }
+    h2{
+        img {
+            width: 10%;
+            height: 10%;
+            @include medium () {
+                width: 20%;
+                height: 20%;
+            }
+        }
+    }
+}
+
+/*商品分類*/
+.categories{
+    .card-columns{
+        @include small(){
+            column-count: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card{
+            position: relative;
+            @include small(){
+                max-width: 48%;
+                margin: 1%;
+            }
+            img{
+                @include small(){
+                    height: 300px;
+                }
+            }
+            &:hover{
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: 10px;
+                    border: 2px solid white;
+                }
+            }
+            .card-body-overlay{
+                position: absolute;
+                bottom: 10%;
+                left: 0;
+                right: 0;
+                text-align: center;
+                margin: 0 50px;
+                padding: 30px 0;
+                background-color: rgb(255, 255, 255);
+                opacity: .7;
+                transition: .3s;
+                @include medium(){
+                    padding: 10px 0;
+                    margin: 0 20px;
+                }
+                h4{
+                    color: black;
+                    @include medium(){
+                        font-size: 16px;
+                    }
+                }
+            }
+            &:hover .card-body-overlay{
+                opacity: 1;
+                border-radius: 15px;   
+            }
+        }
+        .card:nth-of-type(3),.card:nth-of-type(6){
+            @include small(){
+                display: none;
+            }
+        }
+    }
+}
+
+/*新商品*/
+.new{
+    .arrivals{
+        .card{
+            height: 380px;
+            @include large(){
+                height: 350px;
+            }
+            @include small(){
+                height: 400px;
+            }
+            .badge{
+                font-size: 20px;
+            }
+            .card-footer{
+                display: flex;
+                justify-content: flex-end;
+                border-top: none;
+                padding-left: 0;
+                padding-right: 0;
+                background-color: transparent;
+                @include large(){
+                    
+                }
+            }
+        }
+        .swiper-pagination{
+            position: absolute; 
+            --swiper-theme-color: #141516;
+        }
+    }
+}
+
+/*廣告牌*/
+.billboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    background-image: url('../../image/jumbotron.jpg');
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+    }
+    .jumbotron-text{
+        z-index: 1;
+        color: white;
+        small{
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 4px;
+        }
+        h2{
+            font-weight: 600;
+        }
+    }
+}
+
+/*承諾顧客*/
+.promise{
+    user-select: none;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    @include large(){
+        
+    }
+    .card{
+        border: none;
+        img{
+            display: block;
+            margin: auto;
+            width: 30%;
+            opacity: .8;
+        }
+        .card-body{
+            text-align: center;
+            h3{
+                font-size: 24px;
+                font-weight: 600;
+                letter-spacing: 5px;
+            }
+            p{
+                margin-top: 20px;
+                color: rgb(85, 85, 85);
+                font-size: 20px;
+                @include medium(){
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.alert{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.87);
+    .ad{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        p{
+            color: white;
+            font-size: 26px;
+            text-align: center;
+            line-height: 2.5;
+            &:nth-of-type(2){
+                font-size: 60px;
+                border: 1px solid white;
+            }
+            i{
+                margin: 0 30px 30px;
+                padding: 10px;
+                border: 1px solid white;
+                color: white;
+            }
+        }
+        input{
+            padding: 30px;
+        }
+        button{
+            background-color: honeydew;
+            font-size: 20px;
+        }
+    }
+    .close{
+        color: rgb(255, 255, 255);
+        z-index: 2;
+        font-size: 50px;
+    }
+}

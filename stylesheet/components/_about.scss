@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/*conpany*/
+.conpany{
+    .introduction{
+        display: flex;
+        justify-content: flex-end;
+        .card{
+            border-radius: none;
+            border: none;
+            border-top: 3px solid black;
+            width: 75%;
+            @include large(){
+                width: 100%;
+            }
+            h1{
+                font-size: 100px;
+                font-family: 'Pacifico', cursive;
+            }
+            p{
+                line-height: 2;
+            }
+            a{
+                border: 3px solid $primary-color;
+                margin-top: 50px;
+                letter-spacing: 10px;
+                font-weight: 600;
+                &:hover{
+                    background-color: $primary-color;
+                    color: white;
+                }
+            }
+        }
+    }
+    .marking{
+        position: relative;
+        margin: auto;
+        @include large(){
+            display: none;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 80%;
+            height: 100%;
+            background-color: $third-color;
+            z-index: -1;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            height: 90%;
+            background-color: $secondary-color;
+        }
+    }
+}
+/*partner*/
+.partner{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    @include medium(){
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+    }
+    .row{
+        margin: 30px 0;
+        justify-content: space-between;
+        align-items: center;
+        @include medium(){
+            justify-content: space-around;
+        }
+        .col-4{
+            margin: 20px 0;
+        }
+    }
+    h2{
+        font-size: 3.5em;
+        font-weight: 900;
+        font-family: '標楷體';
+        text-decoration: underline;
+    }
+}
+/*boss*/
+.founder{
+    margin-top: 150px;
+    justify-content: flex-end;
+    @include large(){
+        margin-top: 50px;
+    }
+    .col-md-2{
+        .title{
+            display: flex;
+            justify-content: flex-start;
+            @include medium(){
+                flex-direction: column;
+            }
+        }
+        h3{
+            writing-mode: vertical-lr;
+            font-size: 40px;
+            position: relative;
+            @include medium(){
+                writing-mode: horizontal-tb;
+                display: inline;
+                font-size: 3.5em;
+                font-weight: 900;
+                font-family: '標楷體';
+                text-decoration: underline;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -150px; 
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                height: 80%;
+                width: 2px;
+                background-color: rgb(65, 65, 65);
+                @include medium(){
+                    display: none;
+                }
+            }
+        }
+        small{
+            writing-mode: vertical-lr;
+            font-size: 20px;
+            @include medium(){
+                writing-mode: horizontal-tb;
+            }
+        }
+    }
+    .col-md-10{
+        padding-left: 50px;
+        @include large(){
+            padding-left: 0;
+        }
+        h2{
+            font-family: 'Lobster', cursive;
+            font-size: 60px;
+            letter-spacing: 10px;
+            color: $third-color;
+            @include large(){
+                text-align: center;
+            }
+        }
+        .col-md-12{
+            display: flex;
+            justify-content: flex-end;
+            @include large(){
+                flex-direction: column;
+            }
+            @include medium(){
+                padding-right: 0;
+            }
+            .content{
+                position: absolute;
+                width: 55%;
+                top: 0;
+                left: 0;
+                border-radius: 5px;
+                background-color: rgb(255, 255, 255);
+                @include large(){
+                    position: static;
+                    width: 100%;
+                }
+                h3{
+                    font-size: 30px;
+                    margin: 20px 0 30px;
+                    @include large(){
+                        text-align: center;
+                    }
+                }
+                p{
+                    font-size: 20px;
+                    line-height: 2;
+                    
+                }
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+/*team*/
+.team{
+    .row{
+        flex-direction: row-reverse;
+    }
+    .col-md-2{
+        .title{
+            justify-content: flex-end;
+        }
+        h3{
+            &::before{
+                height: 60%;
+                @include medium(){
+                    left: 35% !important;
+                }
+            }
+        }
+    }
+    .col-md-10{
+        .col-md-4{
+            h2{
+                text-align: center;
+                margin: 20px 0;
+            }
+            p{
+                line-height: 2;
+            }
+            img{
+                max-width: 100%;
+            }
+            .connection{
+                display: flex;
+                justify-content:center;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -20px;
+                    width: 10%;
+                    height: 2px;
+                    background-color: black;
+                }
+                i{
+                    padding: 10px;
+                    color: rgb(141, 120, 97);
+                }
+            }
+        }
+    }
+}
+/*bg*/
+.bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../image/quality.jpg);
+    height: 500px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.246);
+    }
+    h2{
+        font-size: 5em;
+        color: white;
+        z-index: 1;
+        border: 5px solid white;
+        padding: 20px 10px;
+    }
+}

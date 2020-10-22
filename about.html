@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet/all.css">
+    <!--swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <title>Bootstrap | 電商平台</title>
+</head>
+
+<body>
+    <header class="header container mt-5">
+        <div class="row">
+            <!--漢堡選單-->
+            <div class="open-icon">
+                <a class="btn" href=""><i class="fa fa-bars" aria-hidden="true"></i></a>
+            </div>
+            <!--社群icon-->
+            <div class="community col-lg-4">
+                <nav class="nav">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-snapchat-ghost fa-lg" aria-hidden="true"></i>
+                    </a>
+                </nav>
+            </div>
+            <!--LOGO-->
+            <div class="logo col-lg-4">
+                <img class="d-block mx-auto" src="image/LOGO.svg" alt="">
+            </div>
+            <!--使用選單-->
+            <div class="side col-lg-4">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown" href="#" role="button" id="dropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span class="badge badge-danger rounded-circle">10</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <section class="shoppingcart container">
+                                    <table class="table table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" colspan="3">加入購物車的商品</th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" style="height: auto;">
+                                                    <div class="cartpd">
+                                                        <p>舒適透氣慢跑鞋(女)</p>
+                                                        <span>紅色</span>
+                                                        <span>27.5</span>
+                                                    </div>
+                                                </th>
+                                                <td style="padding: none;">
+                                                    $39.00
+                                                </td>
+                                                <td>
+                                                    <div class="quantity">
+                                                        <input type="number" min="1" max="50" step="1" value="2">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn border-0">
+                                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="height: auto;">
+                                                    <div class="cartpd">
+                                                        <p>紅寶石項鍊(女)</p>
+                                                        <span>翡翠紅色</span>
+                                                    </div>
+                                                </th>
+                                                <td>
+                                                    $139.00
+                                                </td>
+                                                <td>
+                                                    <div class="quantity">
+                                                        <input type="number" min="1" max="50" step="1" value="1">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn border-0">
+                                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="height: auto;">
+                                                    <div class="cartpd">
+                                                        <p>顯長牛仔褲短(女)</p>
+                                                        <span>淺藍色</span>
+                                                        <span>XXL</span>
+                                                    </div>
+                                                </th>
+                                                <td>
+                                                    $19.00
+                                                </td>
+                                                <td>
+                                                    <div class="quantity">
+                                                        <input type="number" min="1" max="50" step="1" value="1">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn border-0">
+                                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="height: auto;">
+                                                    <div class="cartpd">
+                                                        <p>經典superlogo 短袖Tshirt</p>
+                                                        <span>綠色</span>
+                                                        <span>M</span>
+                                                    </div>
+                                                </th>
+                                                <td>
+                                                    $9.00
+                                                </td>
+                                                <td>
+                                                    <div class="quantity">
+                                                        <input type="number" min="1" max="50" step="1" value="3">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn border-0">
+                                                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <a href="shoppingcart.html" class="btn btn-secondary my-3" style="width: 100%;">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        結帳去
+                                    </a>
+                                </section>
+                            </div>
+                        </div>
+                    </li>
+                    <!--搜尋-->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="您想搜尋什麼..."
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <ul class="menu nav nav-pills nav-justified">
+            <li class="mb-close-menu nav-item">
+                <button class="btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link h4 text-secondary" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link h4 disabled" href="about.html">ABOUT</a>
+            </li>
+            <li class="shop mb-shop nav-item">
+                <a class="nav-link h4 text-secondary" href="shop.html">
+                    SHOP
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </a>
+                <ul class="list-group">
+                    <li class="list-group-item border-top-0">
+                        <a class="btn" href="shop.html">
+                            <p>全部</p>ALL
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="btn" href="shop-man.html">
+                            <p>男裝</p>MAN's
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="btn" href="shop-man.html">
+                            <p>女裝</p>WOMAN's
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="btn" href="shop-man.html">
+                            <p>童裝</p>KID's
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="btn" href="shop-man.html">
+                            <p>飾品</p>ACCESSORIES
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link h4 text-secondary" href="#">BLOG</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link h4 text-secondary" href="contact.html">CONTACT</a>
+            </li>
+        </ul>
+    </header>
+
+    <nav class="bdb container-fluid py-5" aria-label="breadcrumb">
+        <h1>ABOUT</h1>
+        <ol class="breadcrumb">
+
+            <li class="breadcrumb-item active" aria-current="page">ABOUT</li>
+        </ol>
+    </nav>
+
+    <main>
+        <!--conpany-->
+        <section class="conpany container-fluid my-5">
+            <div class="row">
+                <div class="introduction col-md-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <smail class="card-title display-4">Clothes</smail>
+                            <h1 class="card-text text-center">RONA</h1>
+                            <p class="mt-3">
+                                因而大陸一口氣完成事件三大網域名稱嚴格群發小說大學生公園，一股操作系統穿著一下官方但我什麼樣投訴效果，適用實際注重物流醫藥定位性能快捷預計，上門造成國務院賺錢細節大小屬於，二手辦理大小高度計劃電池最高迅速良好聯繫方式，是個簡介，鑒定總體，要在期待想到，很。
+                                任意評價沒有任何鮮花始終內心開口，按鈕即可先進性閲讀營銷話題優質神秘前來上來之中僅供資源無數，委員會說話時尚好好卻是部分清晰和他，反正聲音任務咱們你在支持，股份證券歡迎光臨先後兩人體內我把正在兒子人們，其實健康，地上外貿認為年度總算一定會當前，排行榜生命。
+                            </p>
+                            <a href="shop.html" class="btn d-block w-75 mx-auto">馬上購物去</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="marking col-md-4">
+                    <img src="image/LOGO.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!--partner-->
+        <section class="partner container my-5">
+            <h2># 合作夥伴</h2>
+            <div class="row">
+                <div class="col-4 col-md-2">
+                    <img class="rwd-img" src="image/partner.png" alt="">
+                </div>
+                <div class="col-4 col-md-2">
+                    <img class="rwd-img" src="image/partner1.png" alt="">
+                </div>
+                <div class="col-4 col-md-2">
+                    <img class="rwd-img" src="image/partner2.png" alt="">
+                </div>
+                <div class="col-4 col-md-2">
+                    <img class="rwd-img" src="image/partner3.png" alt="">
+                </div>
+                <div class="col-4 col-md-2">
+                    <img class="rwd-img" src="image/partner4.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!--boss-->
+        <section class="founder container my-5">
+            <div class="row">
+                <div class="col-12 col-md-2">
+                    <div class="title">
+                        <small>Founder</small>
+                        <h3 class="m-0"># 創辦人</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-10">
+                    <h2 class="mt-5">WenJun</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="content">
+                                <h3>時間就是金錢，金錢就是時間</h3>
+                                <p>般號碼歡迎您簡體般號碼歡迎您簡體一般號碼歡迎您簡體感受行情前進出了天空孤獨，一段團體能不能形勢情況那樣指出不夠收集感情樓上不能，貢獻豐原此次街道上午就像應該逐步觀念，獨立增加發生經理先進工程還可以二十都會帳號，編號不多是他像是會議影視視頻，出口鼓勵被人排行，交給某種改善股權歡迎光臨語言。
+                                </p>
+                            </div>
+                            <img src="image/founder.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--team-->
+        <section class="team founder container my-5">
+            <div class="row">
+                <div class="col-12 col-md-2">
+                    <div class="title">
+                        <small>Meet our team</small>
+                        <h3 class="team m-0"># 團隊成員</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-10">
+                    <div class="row">
+                        <div class="col-md-4 my-5">
+                            <img class="" src="image/team1.jpg" alt="">
+                            <h2>joun</h2>
+                            <p>發佈日期此刻笑容，購物這裡，理論太陽，改進整個製作全家背景</p>
+                            <div class="connection">
+                                <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-5">
+                            <img class="" src="image/team2.jpg" alt="">
+                            <h2>may</h2>
+                            <p>發佈日期此刻笑容，購物這裡，理論太陽，改進整個製作全家背景</p>
+                            <div class="connection">
+                                <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-5">
+                            <img class="" src="image/team3.jpg" alt="">
+                            <h2>gary</h2>
+                            <p>發佈日期此刻笑容，購物這裡，理論太陽，改進整個製作全家背景</p>
+                            <div class="connection">
+                                <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--bg-->
+        <section class="bg bg-cover container-fluid">
+            <h2>您的滿意，就是我們最好的誠意。</h2>
+        </section>
+    </main>
+
+
+    <!--FOOTER-->
+    <footer class="py-5">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6 col-xl-3">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <img class="d-block mx-auto" src="image/LOGO.svg" alt="">
+                        </li>
+                        <li class="list-group-item">
+                            <p class="h1 text-center">RONA CLOTHES</p>
+                            <p class=" text-center">Copyright © 2020 RONA Inc. All rights reserved</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                    <ul class="list-group">
+                        <li class="list-group-item h2">-- Help --</li>
+                        <li class="list-group-item">會員群益</li>
+                        <li class="list-group-item">常見問題</li>
+                        <li class="list-group-item">售後服務</li>
+                        <li class="list-group-item">Personal consultant</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                    <ul class="list-group">
+                        <li class="list-group-item h2">-- follower us --</li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fa fa-facebook-official fa-2x mr-2" aria-hidden="true"></i>
+                            <span>rona_clothes_store</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fa fa-twitter fa-2x mr-2" aria-hidden="true"></i>
+                            <span>ronaclothes</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fa fa-instagram fa-2x mr-2" aria-hidden="true"></i>
+                            <span>@ronaclothes0319</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fa fa-snapchat-ghost fa-2x mr-2" aria-hidden="true"></i>
+                            <span>ronact</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                    <ul class="list-group">
+                        <li class="list-group-item h2">-- Subscribe --</li>
+                        <li class="list-group-item">
+                            <div class="h4 mb-3">
+                                訂閱我們
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Your email..."
+                                    aria-label="Your email" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="input-group-text text-white" id="basic-addon2">Submit</button>
+                                </div>
+                            </div>
+                            <div class="h5 mb-3 mt-5">
+                                <p>
+                                    <i class="fa fa-phone mr-2" aria-hidden="true"></i>
+                                    05-4686515
+                                </p>
+                                <p>
+                                    <i class="fa fa-envelope-o mr-2" aria-hidden="true"></i>
+                                    rona@gmail.com
+                                </p>
+                                <p>
+                                    <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                                    300 新竹市西區中山路一段22號1樓
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!--bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!--swiper-->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="js/all.js"></script>

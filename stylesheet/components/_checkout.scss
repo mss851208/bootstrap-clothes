@@ -1,0 +1,86 @@
+.billing{
+    .col-md-7{
+        @include medium(){
+            margin-bottom: 50px;
+        }
+        h2{
+            margin: 50px 0 30px;
+            font-weight: 600;
+            font-size: 50px;
+        }
+        .form-row,.form-group{
+            margin: 15px 0;
+            label{
+                font-size: 18px;
+            }
+            input,textarea{
+                border: none;
+                background-color: rgb(240, 240, 240);
+            }
+        }
+    }
+    .col-md-5{
+        background-color: rgb(243, 243, 243);
+        .products{
+            border-top: 1px solid rgb(179, 179, 179);
+            padding-top: 20px;
+        }
+        h2{
+            text-align: center;
+            font-weight: 900;
+            font-size: 40px;
+            margin: 20px 0;
+        }
+        .item{
+            display: flex;
+            justify-content: space-between;
+            p{
+                font-size: 18px;
+                color: rgb(54, 54, 54);
+            }
+            span{
+                font-weight: 800;
+            }
+        }
+        .subtotal{
+            border-top: 1px solid rgb(179, 179, 179);
+            padding-top: 20px;
+            p{
+                font-size: 24px;
+                font-weight: 800;
+            }
+        }
+        .shipping{
+            border-top: 1px solid rgb(179, 179, 179);
+            padding-top: 20px;
+            p{
+                font-size: 24px;
+                font-weight: 800;
+                &:nth-of-type(2){
+                    color: rgb(141, 141, 141);
+                }
+            }
+        }
+        .total{
+            border-top: 1px solid rgb(179, 179, 179);
+            padding-top: 20px;
+            p{
+                font-size: 30px;
+                font-weight: 800;
+                &:nth-of-type(2){
+                    color: rgb(199, 49, 49);
+                    font-size: 30px;
+                }
+            }
+        }
+        .form-check{
+            margin: 10px 0;
+        }
+        button{
+            margin: 20px 0;
+            width: 100%;
+            font-size: 28px;
+            font-weight: 600;
+        }
+    }
+}

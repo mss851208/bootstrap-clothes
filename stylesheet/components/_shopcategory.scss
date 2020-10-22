@@ -1,0 +1,16 @@
+.category{
+    .pdcard{
+        .card{
+            width: 100%;
+        }
+    }
+    .swiper-button-prev,.swiper-button-next{
+        &::after{
+            display: none;
+        }
+        i{
+            font-size: 36px;
+            color: rgb(41, 35, 35);
+        }
+    }
+}
