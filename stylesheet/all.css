@@ -609,7 +609,7 @@ footer .input-group-text i {
           align-items: center;
   text-align: center;
   height: 500px;
-  background: url("../../image/jumbotron.jpg");
+  background-image: url("../image/jumbotron.jpg");
   position: relative;
 }
 
